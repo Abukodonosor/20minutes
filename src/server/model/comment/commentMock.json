@@ -1,0 +1,34 @@
+{
+  "comments": [
+    {
+      "id": "501",
+      "post_id": "10001",
+      "name": "Van Gogh",
+      "text": "This is a good cool post about everything you need to know!!!!"
+    },
+    {
+      "id": "502",
+      "post_id": "10001",
+      "name": "Victor Igo",
+      "text": "This is a good cool post about everything you need to know!!!!"
+    },
+    {
+      "id": "503",
+      "post_id": "10001",
+      "name": "",
+      "text": "This is a good cool post about everything you need to know!!!!"
+    },
+    {
+      "id": "504",
+      "post_id": "10002",
+      "name": "Merlin",
+      "text": "You will never know the secret of excalibur!!!!"
+    },
+    {
+      "id": "505",
+      "post_id": "10002",
+      "name": "Highlander",
+      "text": "Endless story!!!!"
+    }
+  ]
+}
