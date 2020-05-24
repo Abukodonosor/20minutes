@@ -5,6 +5,7 @@ import { HeaderContent } from "./components/Header";
 import { FooterContent } from "./components/Footer";
 
 import { MainPage } from "./components/MainPage";
+import { BlogpostPage } from "./components/BlogpostPage";
 
 export const App = (props) => {
   return (
@@ -13,6 +14,7 @@ export const App = (props) => {
       <Router>
         <Switch>
           <Route exact path="/" component={MainPage} />
+          <Route path="/blogpost/:id" component={BlogpostPage} />
           <Route exact path="*" component={() => "404 Not found (:"} />
         </Switch>
       </Router>
