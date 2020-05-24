@@ -7,8 +7,7 @@
     "test": "jest",
     "server": "nodemon ./src/server/app.js",
     "build": "webpack -p",
-    "watcher": "webpack -p --watch --info-verbosity verbose",
-    "dev": "webpack-dev-server --hot --inline"
+    "dev": "webpack -d --watch --info-verbosity verbose"
   },
   "author": "",
   "license": "ISC",
