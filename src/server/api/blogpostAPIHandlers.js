@@ -30,11 +30,22 @@ router.get("/post/:id", function (req, res, next) {
 });
 
 router.get("/post/:id/comments", function (req, res, next) {
-  // render a regular page
-  console.log(req.params.id);
+  const { id } = req.params;
+
+  if (!id) {
+    return res.json({
+      status: "Fail",
+      result: {},
+      message: "Post id is required !!!",
+    });
+  }
+
+  const commentsResult = Blogpost.getCommentsForPostId(id);
+
   res.json({
     status: "Success",
-    message: "Best route ever",
+    result: commentsResult,
+    message: "",
   });
 });
 

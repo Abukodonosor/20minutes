@@ -17,6 +17,12 @@ class Comment {
     const obj = data.getData(Comment.jsonData);
     return obj.comments;
   }
+
+  static getCommentsByPostId(id) {
+    const obj = data.getData(Comment.jsonData);
+    const commentsResult = obj.comments.filter((el) => el.post_id === id);
+    return commentsResult;
+  }
 }
 
 module.exports = Comment;

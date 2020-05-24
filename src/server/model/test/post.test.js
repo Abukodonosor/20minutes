@@ -8,5 +8,9 @@ describe("Post model verification", () => {
     expect(allPosts.length).not.toBe(0);
   });
 
+  it("Find specific post", async () => {
+    const allPosts = Post.getPostById("123123123123231");
+    expect(allPosts.length).toBe(0);
+  });
   it("Update post", async () => {});
 });

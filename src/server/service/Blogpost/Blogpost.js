@@ -27,6 +27,12 @@ class Blogpost {
 
     return postsWithCommentsResult;
   }
+
+  static getCommentsForPostId(id) {
+    const allComments = Comment.getCommentsByPostId(id);
+
+    return allComments;
+  }
 }
 
 module.exports = Blogpost;
