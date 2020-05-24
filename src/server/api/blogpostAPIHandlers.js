@@ -8,7 +8,6 @@ router.post("/posts", function (req, res, next) {
   res.json({ status: "Success", result: shorterBlogPostsResult, message: "" });
 });
 
-// http://localhost:3000/blog/post/dqwdqwdqwd
 router.get("/post/:id", function (req, res, next) {
   const { id } = req.params;
 

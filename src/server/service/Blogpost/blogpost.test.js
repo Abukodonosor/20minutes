@@ -13,6 +13,10 @@ describe("Blogpost service verification", () => {
 
   it("Get invalid post id: 9812312893721398", async () => {
     const postOverviews = Blogpost.getPostById(9812312893721398);
-    expect(postOverviews).not.toBe([]);
+    expect(postOverviews.length).toBe(0);
   });
+
+  //testing can be more defined but in this formulation is usless
+  it("Create new blog post", async () => {});
+  it("Update blog post", async () => {});
 });
