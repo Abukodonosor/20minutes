@@ -12,6 +12,9 @@ module.exports = {
       return;
     }
   },
+  //The task is not defined so well, so i just use mocked data
+  //solution to update mocked data is to override it
+  //we could avoid it with use of mysql, redis, mongo or some other storage mechanism
   setData: function (data, fileName) {
     try {
       var obj = fs.writeFileSync(

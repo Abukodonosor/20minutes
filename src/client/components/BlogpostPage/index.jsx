@@ -23,8 +23,7 @@ export const BlogpostPage = () => {
       })
       .catch((err) => {
         console.log("error data", err);
-      })
-      .finally(() => {});
+      });
   }, []);
 
   return (

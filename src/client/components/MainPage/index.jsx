@@ -22,8 +22,7 @@ export const MainPage = () => {
       })
       .catch((err) => {
         console.log("error data", err);
-      })
-      .finally(() => {});
+      });
   }, []);
 
   const blogItemsList = blogposts.map((el, key) => (
