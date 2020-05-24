@@ -18,8 +18,7 @@ class Post {
 
   static getPostById(id) {
     const obj = data.getData(Post.jsonData);
-
-    const postResult = obj.posts.map((el) => el.id === id);
+    const postResult = obj.posts.filter((el) => el.id === id);
     return postResult;
   }
 }

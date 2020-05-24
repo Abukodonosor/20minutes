@@ -6,11 +6,11 @@ class Blogpost {
     const allPosts = Post.getAll();
     const allComments = Comment.getAll();
 
-    const result = mapCommentToPost(allPosts, allComments);
+    const result = mapCommentsToPost(allPosts, allComments);
 
     const postsWithCommentsResult = result.map((el) => {
       el.numberOfComments = el.comments.length;
-      delete el.comments; // delete list of comments
+      delete el.comments; // delete comments attribute
       return el;
     });
 
@@ -18,10 +18,12 @@ class Blogpost {
   }
 
   static getPostById(id) {
-    const post = Post.getPostById();
+    const post = Post.getPostById(id);
     const allComments = Comment.getAll();
 
-    const postsWithCommentsResult = mapCommentToPost(post, allComments);
+    const postsWithCommentsResult = mapCommentsToPost(post, allComments);
+
+    if (postsWithCommentsResult.length) return postsWithCommentsResult[0];
 
     return postsWithCommentsResult;
   }
@@ -29,7 +31,9 @@ class Blogpost {
 
 module.exports = Blogpost;
 
-const mapCommentToPost = (allPosts, allComments) => {
+//private mapping function to find all comments who belong to specific post
+//better solution is to use map so this could be O(n+m)
+const mapCommentsToPost = (allPosts, allComments) => {
   let postsWithCommentsResult = [];
   for (let post of allPosts) {
     let comments = [];

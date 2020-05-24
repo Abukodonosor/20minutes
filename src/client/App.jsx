@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { HeaderContent } from "./components/Header";
 import { FooterContent } from "./components/Footer";
@@ -14,7 +14,7 @@ export const App = (props) => {
       <Router>
         <Switch>
           <Route exact path="/" component={MainPage} />
-          <Route path="/blogpost/:id" component={BlogpostPage} />
+          <Route exact path="/blogpost/:id" component={BlogpostPage} />
           <Route exact path="*" component={() => "404 Not found (:"} />
         </Switch>
       </Router>

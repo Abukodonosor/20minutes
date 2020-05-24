@@ -10,7 +10,7 @@ router.post("/posts", function (req, res, next) {
 
 // http://localhost:3000/blog/post/dqwdqwdqwd
 router.get("/post/:id", function (req, res, next) {
-  const { id } = req.params.id;
+  const { id } = req.params;
 
   if (!id) {
     return res.json({
@@ -29,8 +29,7 @@ router.get("/post/:id", function (req, res, next) {
   });
 });
 
-// a middleware sub-stack that handles GET requests to the /user/:id path
-router.post("/post/:id/comments", function (req, res, next) {
+router.get("/post/:id/comments", function (req, res, next) {
   // render a regular page
   console.log(req.params.id);
   res.json({
