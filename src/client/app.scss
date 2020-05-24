@@ -1,0 +1,15 @@
+@import "./components/Header/HeaderContent.scss";
+@import "./components/Footer/FooterContent.scss";
+@import "./components/MainPage/MainPage.scss";
+@import "./components/BlogpostPage/BlogpostPage.scss";
+
+.App {
+  width: 100%;
+  min-height: 600px;
+}
+
+body {
+  background: #fefefe;
+  padding: 0px;
+  margin: 0px;
+}
