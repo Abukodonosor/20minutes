@@ -37,7 +37,7 @@ export const MainPage = () => {
   return <div className="main-page">{blogItemsList}</div>;
 };
 
-const BlogItemCard = ({ title, numberOfComments, linkToPost }) => {
+export const BlogItemCard = ({ title, numberOfComments, linkToPost }) => {
   return (
     <div className="blog-item">
       <h4>{title}</h4>
